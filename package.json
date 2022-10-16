@@ -1,0 +1,33 @@
+{
+  "name": "@learning-vue3/node",
+  "version": "1.0.0",
+  "description": "A Node.js demo for learning-vue3.",
+  "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
+  "homepage": "https://github.com/learning-vue3/hello-node",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learning-vue3/hello-node.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:cjs": "node src/cjs/index.cjs",
+    "dev:esm": "node src/esm/index.mjs",
+    "dev:ts": "ts-node src/ts/index.ts",
+    "build": "tsc src/ts/index.ts --outDir dist --target es6",
+    "compile": "babel src/babel --out-dir compiled",
+    "serve": "node server/index.js",
+    "backup": "git add . && git commit -m \"chore: backup\" && git push"
+  },
+  "dependencies": {
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@types/md5": "^2.3.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
