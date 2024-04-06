@@ -14,7 +14,7 @@
     "dev:cjs": "node src/cjs/index.cjs",
     "dev:esm": "node src/esm/index.mjs",
     "dev:ts": "ts-node src/ts/index.ts",
-    "build": "tsc src/ts/index.ts --outDir dist --target es6",
+    "build": "tsc src/ts/index.ts --outDir dist --target es6 --skipLibCheck",
     "compile": "babel src/babel --out-dir compiled",
     "serve": "node server/index.js",
     "backup": "git add . && git commit -m \"chore: backup\" && git push"
